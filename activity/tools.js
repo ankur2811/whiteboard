@@ -46,6 +46,7 @@ for (let i = 0; i < sliders.length; i++) {
     sliders[i].addEventListener("change", function () {
         let width = sliders[i].value;
         ctx.lineWidth = width;
+        socket.emit('widthChange', width);
     })
 }
 
